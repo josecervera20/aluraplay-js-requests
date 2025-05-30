@@ -1,0 +1,195 @@
+/* Reset básico y box-sizing para una base sólida */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--azul-claro, #e0f7fa);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal de la página */
+.container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+/* Contenedor del formulario */
+.container__formulario {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 90%;
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: initial;
+}
+
+/* Título del formulario (h2) */
+.formulario__titulo {
+    color: var(--azul-medio, #007bff);
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Contenedor de cada campo del formulario (div que envuelve label e input) */
+.formulario__campo {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+/* Etiqueta del campo (label) */
+.campo__etiqueta {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--azul-medio, #007bff);
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+/* Campo de entrada de texto (input) */
+.campo__escrita {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 0.0625rem solid var(--azul-medio, #007bff);
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    color: black;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para el placeholder del input */
+.campo__escrita::placeholder {
+    color: #888;
+    opacity: 1;
+}
+
+/* Efecto focus en el input */
+.campo__escrita:focus {
+    border-color: var(--azul-escuro, #0056b3);
+    box-shadow: 0 0 0.5rem rgba(0, 123, 255, 0.25);
+}
+
+/* Botón de envío del formulario (submit) */
+.formulario__boton {
+    padding: 0.8rem 2.5rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--azul-escuro, #0056b3);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover y active en el botón */
+.formulario__boton:hover {
+    background-color: var(--azul-medio, #007bff);
+}
+
+.formulario__boton:active {
+    transform: scale(0.98);
+}
+
+/*  Media Queries para pantallas más pequeñas (tablets, hasta 768px) */
+@media screen and (max-width: 48em) {
+    .container {
+        padding-top: 5rem;
+    }
+
+    .container__formulario {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .formulario__titulo {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .formulario__campo {
+        margin-bottom: 1.2rem;
+    }
+
+    .campo__etiqueta {
+        font-size: 0.95rem;
+    }
+
+    .campo__escrita {
+        font-size: 0.95rem;
+        padding: 0.7rem 0.9rem;
+    }
+
+    .formulario__boton {
+        font-size: 1rem;
+        padding: 0.7rem 2rem;
+        margin-top: 1.2rem;
+    }
+}
+
+/*  Media Queries para pantallas muy pequeñas (móviles, hasta 480px) */
+@media screen and (max-width: 30em) {
+    .container {
+        padding-top: 4rem;
+        align-items: flex-start;
+    }
+
+    .container__formulario {
+        width: 95%;
+        padding: 1rem;
+        margin: 2rem 0.5rem;
+    }
+
+    .formulario__titulo {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .formulario__campo {
+        margin-bottom: 1rem;
+    }
+
+    .campo__etiqueta {
+        font-size: 0.9rem;
+        padding-left: 0.3rem;
+    }
+
+    .campo__escrita {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .campo__escrita::placeholder {
+        font-size: 0.75rem;
+    }
+
+    .formulario__boton {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+        margin-top: 1rem;
+    }
+}
