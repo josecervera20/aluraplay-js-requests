@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo -->
+    <title>Enviar Video | AluraPlay</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles-form.css">
+</head>
+
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <nav class="encabezado">
+            <a class="logo" href="../index.html"></a>
+
+            <!-- Iconos del usuario -->
+            <div class="encabezado__iconos">
+                <a href="./enviar-video.html" class="encabezado__videos"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Formulario para enviar un nuevo video -->
+        <form class="container__formulario" data-formulario>
+            <h2 class="formulario__titulo">¡Envía un vídeo!</h2>
+
+            <!-- Campo para URL del video -->
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="url">Link del video</label>
+                <input name="url" class="campo__escrita" required
+                    placeholder="Por ejemplo: https://www.youtube.com/embed/QjOWz9avkg8" id='url' data-url />
+            </div>
+
+            <!-- Campo para título del video -->
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="titulo">Título del vídeo</label>
+                <input name="titulo" class="campo__escrita" required
+                    placeholder="En este campo, pon el nombre del vídeo" id='titulo' data-titulo />
+            </div>
+
+            <!-- Campo para imagen del video -->
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="imagen">Imagen de perfil</label>
+                <input name="imagen" class="campo__escrita" required placeholder="Inserta la URL de la imagen"
+                    id='imagen' data-imagen />
+            </div>
+
+            <!-- Botón de envío del formulario -->
+            <input class="formulario__boton" type="submit" value="Enviar" />
+        </form>
+    </main>
+
+    <!-- JS -->
+    <script src="../js/crearVideo.js" type="module"></script>
+</body>
+
+</html>
